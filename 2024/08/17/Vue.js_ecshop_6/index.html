@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Emma Huang"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vue.js ecshop 6.props &amp; emit 資料傳遞"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hey! It&#39;s Emma!"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Vue.js ecshop 6.props &amp; emit 資料傳遞 - Hey! It&#39;s Emma!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="img/logo.png"/>
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/blog/">Emma's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/">
+                            
+                                HOME
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/archives">
+                            
+                                Blogs
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Huiwen-Huang">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/blog/img/ecshop-6.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Vue.js ecshop 6.props & emit 資料傳遞</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-08-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/Vue-js-ecshop/">#Vue.js  / ecshop</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <blockquote>
+<p>此篇會分享 <strong>後台產品列表頁面</strong> 在新增商品時，該如何抓取列表的商品資料；以及新增後又該如何更新到產品列表中。<br>其中會使用到 <strong>Vue 資料傳遞</strong>的概念，故會提及 <strong>資料向內傳遞 <code>Props</code></strong> 以及 <strong>向外傳遞 <code>Emit</code></strong> 的用法，那我們就開始吧！</p>
+</blockquote>
+<p>如圖所示，當內、外層元件進行資料傳遞時，就會需要用到 <code>Props</code> &amp; <code>Emit</code> 來進行溝通。<br><img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/props___emit.png?alt=media&token=9fac5309-bdb8-438d-9572-9ee528e6fa56"></p>
+<h3 id="資料向內傳遞-Props"><a href="#資料向內傳遞-Props" class="headerlink" title="資料向內傳遞 Props"></a>資料向內傳遞 Props</h3><ul>
+<li>可以在內層元件透過 <code>props</code> 宣告要從外層元件傳遞資料的屬性名稱，並且搭配 <code>v-bind(:)</code> 做處理</li>
+<li>口訣：<strong>前內後外</strong><img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/props.png?alt=media&token=5a5dbce2-531e-4df8-981a-ccd959b5a3b7"></li>
+<li><strong>單向數據流</strong><ul>
+<li>外部定義的資料，往內層傳遞時是單向性的，<strong>無法透過 <code>v-modal</code> 來改變 <code>props</code> 傳入的內容</strong></li>
+</ul>
+</li>
+<li><strong>命名限制</strong><ul>
+<li>JS 命名需要使用 駝峰命名法 <code>superUrl</code></li>
+<li>但是 HTML 的標籤都須以<strong>小寫</strong>顯示</li>
+<li>故在 <code>&lt;template&gt;&lt;/template&gt;</code> 中可以透過 <code>super-url</code> 來做調整</li>
+</ul>
+</li>
+</ul>
+<h3 id="資料向外傳遞-Emit"><a href="#資料向外傳遞-Emit" class="headerlink" title="資料向外傳遞 Emit"></a>資料向外傳遞 Emit</h3><h4 id="觸發外部事件"><a href="#觸發外部事件" class="headerlink" title="觸發外部事件"></a>觸發外部事件</h4><ul>
+<li>可以在內層元件透過 emit 宣告要觸發外層元件傳遞資料的屬性名稱，並且搭配 <code>v-on(@)</code> 做處理</li>
+<li>口訣：前內後外<ul>
+<li>在內層的 <strong>刪除按鈕</strong> 透過 emit 觸發外部事件 <code>@click=&quot;$emit(&#39;del-item&#39;)&quot;</code></li>
+<li>在外層的 <code>&lt;DelModal&gt;&lt;/DelModal&gt;</code> 加入 <code>@del-item=&quot;delProduct&quot;</code> 以利觸發外層 <code>delProduct（)</code> 事件，進而刪除商品。<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/emit_demo.png?alt=media&token=d12d081f-9f78-43ab-b117-da88bca3e0b7"></li>
+</ul>
+</li>
+</ul>
+<h4 id="傳遞資料狀態"><a href="#傳遞資料狀態" class="headerlink" title="傳遞資料狀態"></a>傳遞資料狀態</h4><ul>
+<li>將內部的資料傳到外部，函式需要帶入參數<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/emit_demo2.png?alt=media&token=f53f3577-2c05-4f5a-98ea-5d0d44f4b1ff"></li>
+</ul>
+<h3 id="透過彈出視窗-Modal-新增商品"><a href="#透過彈出視窗-Modal-新增商品" class="headerlink" title="透過彈出視窗 Modal 新增商品"></a>透過彈出視窗 Modal 新增商品</h3><ul>
+<li>首先回到 <em><strong>ProductModal.vue</strong></em> 製作建立商品模板 <img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/addProducts_modal.png?alt=media&token=79ae6169-9055-4133-a224-7cc5997fd176"></li>
+<li>接著在 <em><strong>ProductsPage.vue</strong></em> 新增以下資料：<ul>
+<li>於 <code>data</code> 新增 <code>tempProduct: &#123;&#125;</code></li>
+<li>於 <code>methods</code> 新增 <code>openModal()</code>、<code>updateProduct()</code><ul>
+<li><strong>打 api 時要帶入參數 <code>this.axios.post(api, &#123; data: this.tempProduct &#125;)</code></strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ProductModal</span> <span class="keyword">from</span> <span class="string">&#x27;../components/ProductModal.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">data</span> () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">products</span>: [],</span><br><span class="line">      <span class="attr">pagination</span>: &#123;&#125;,</span><br><span class="line">      <span class="attr">tempProduct</span>: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">components</span>: &#123;</span><br><span class="line">    <span class="title class_">ProductModal</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="title function_">getProducts</span> () &#123;</span><br><span class="line">      <span class="keyword">const</span> api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/admin/products`</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="title function_">get</span>(api)</span><br><span class="line">        .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">if</span> (res.<span class="property">data</span>.<span class="property">success</span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">data</span>)</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">products</span> = res.<span class="property">data</span>.<span class="property">products</span></span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">pagination</span> = res.<span class="property">data</span>.<span class="property">pagination</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 開啟 modal</span></span><br><span class="line">    <span class="title function_">openModal</span> () &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">tempProduct</span> = &#123;&#125;</span><br><span class="line">      <span class="keyword">const</span> productComponent = <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">productModal</span></span><br><span class="line">      productComponent.<span class="title function_">showModal</span>()</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 新增商品</span></span><br><span class="line">    <span class="title function_">updateProduct</span> (item) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">tempProduct</span> = item</span><br><span class="line">      <span class="keyword">const</span> api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/admin/product`</span></span><br><span class="line">      <span class="keyword">const</span> productComponent = <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">productModal</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="title function_">post</span>(api, &#123; <span class="attr">data</span>: <span class="variable language_">this</span>.<span class="property">tempProduct</span> &#125;)</span><br><span class="line">        .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">          <span class="comment">// 完成後關閉 modal</span></span><br><span class="line">          productComponent.<span class="title function_">hideModal</span>()</span><br><span class="line">          <span class="comment">// 再次更新商品列表</span></span><br><span class="line">          <span class="variable language_">this</span>.<span class="title function_">getProducts</span>()</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title function_">created</span> () &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">getProducts</span>()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>完成後可以新增商品做確認<ul>
+<li>商品新增<strong>成功</strong> <img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/add_success.png?alt=media&token=17c9d168-89a1-4e55-a562-87323046f6ac"></li>
+<li>商品新增<strong>失敗</strong>：（可能是必填欄位沒填，可以確認 message） <img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/add_false.png?alt=media&token=76cd6c36-d44c-44be-adba-5b7e806323c7"></li>
+</ul>
+</li>
+</ul>
+<h3 id="編輯、更新商品"><a href="#編輯、更新商品" class="headerlink" title="編輯、更新商品"></a>編輯、更新商品</h3><ul>
+<li>在 <em><strong>ProductsPage.vue</strong></em> 新增以下：<ul>
+<li>在 <code>data</code> 新增 <code>isNew: false</code></li>
+<li>將 <code>openModal()</code> 新增參數： <code>openModal(isNew, item)</code><ul>
+<li>針對新增商品與編輯商品做區隔：<ul>
+<li>如果是 <strong>新增商品</strong> 就帶出空物件</li>
+<li><strong>編輯商品</strong> 就抓 item 的資料<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">openModal</span> (isNew, item) &#123;</span><br><span class="line">  <span class="comment">//  如果是新的就帶出空物件，不是就抓 item 的資料</span></span><br><span class="line">  <span class="keyword">if</span> (isNew) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">tempProduct</span> = &#123;&#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">tempProduct</span> = &#123; ...item &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">isNew</span> = isNew</span><br><span class="line">  <span class="keyword">const</span> productComponent = <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">productModal</span></span><br><span class="line">  productComponent.<span class="title function_">showModal</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>將 <strong><code>增加一個產品</code></strong> 按鈕帶入參數 <code>@click=&quot;openModal(true)</code><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary&quot;</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> </span></span><br><span class="line"><span class="tag">        @<span class="attr">click</span>=<span class="string">&quot;openModal(true)&quot;</span>&gt;</span>增加一個產品<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>回到 <strong><code>編輯</code></strong> 按鈕新增觸發事件 <code>@click=&quot;openModal(false, item)&quot;</code><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-outline-primary btn-sm&quot;</span> </span></span><br><span class="line"><span class="tag">        @<span class="attr">click</span>=<span class="string">&quot;openModal(false, item)&quot;</span>&gt;</span>編輯<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>調整 <code>updateProduct()</code> 函式，分為 <strong>新增商品</strong>、<strong>編輯商品</strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">updateProduct</span> (item) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">tempProduct</span> = item</span><br><span class="line">  <span class="comment">// 新增</span></span><br><span class="line">  <span class="keyword">let</span> api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/admin/product`</span></span><br><span class="line">  <span class="keyword">let</span> httpMethod = <span class="string">&#x27;post&#x27;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 編輯</span></span><br><span class="line">  <span class="keyword">if</span> (!<span class="variable language_">this</span>.<span class="property">isNew</span>) &#123;</span><br><span class="line">    api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/admin/product/<span class="subst">$&#123;item.id&#125;</span>`</span></span><br><span class="line">    httpMethod = <span class="string">&#x27;put&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> productComponent = <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">productModal</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">axios</span>[httpMethod](api, &#123; <span class="attr">data</span>: <span class="variable language_">this</span>.<span class="property">tempProduct</span> &#125;)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">      productComponent.<span class="title function_">hideModal</span>()</span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">getProducts</span>()</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>回到 <em><strong>ProductModal.vue</strong></em> 新增以下<ul>
+<li>宣告 <code>props</code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">props</span>: &#123;</span><br><span class="line">    <span class="attr">product</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="title class_">Object</span>,</span><br><span class="line">      <span class="title function_">default</span> () &#123; <span class="keyword">return</span> &#123;&#125; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">watch</span>: &#123;</span><br><span class="line">    <span class="title function_">product</span> () &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">tempProduct</span> = <span class="variable language_">this</span>.<span class="property">product</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure></li>
+<li>針對 <strong><code>確認</code></strong> 按鈕新增 <code>emit</code> 觸發外部事件<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary&quot;</span></span></span><br><span class="line"><span class="tag">        @<span class="attr">click</span>=<span class="string">&quot;$emit(&#x27;update-product&#x27;, tempProduct)&quot;</span>&gt;</span>確認<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>回到 <em><strong>ProductsPage.vue</strong></em> 針對 <code>&lt;ProductModal&gt;&lt;/ProductModal&gt;</code> 新增 <code>ref</code> &amp; <code>props</code> &amp; <code>emit</code> :<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ProductModal</span> <span class="attr">ref</span>=<span class="string">&quot;productModal&quot;</span></span></span><br><span class="line"><span class="tag">              <span class="attr">:product</span>=<span class="string">&quot;tempProduct&quot;</span> </span></span><br><span class="line"><span class="tag">              @<span class="attr">update-product</span>=<span class="string">&quot;updateProduct&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">ProductModal</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/editProduct_demo.png?alt=media&token=af335d34-9bb7-42cb-ab66-74d58999d107"></li>
+</ul>
+<p>下篇文章將會插播 <strong>使用 mixin 整合相同程式碼</strong> 以利多檔案間做使用，並且接續進行 <strong>刪除商品</strong> 的設定。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Huiwen-Huang" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Emma Huang<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

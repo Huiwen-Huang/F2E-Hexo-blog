@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Emma Huang"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vue.js ecshop 16.購物車側欄 BS5 offcanvas 元件"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hey! It&#39;s Emma!"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Vue.js ecshop 16.購物車側欄 BS5 offcanvas 元件 - Hey! It&#39;s Emma!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="img/logo.png"/>
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/blog/">Emma's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/">
+                            
+                                HOME
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/archives">
+                            
+                                Blogs
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Huiwen-Huang">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/blog/img/ecshop-16.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Vue.js ecshop 16.購物車側欄 BS5 offcanvas 元件</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-09-08
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/Vue-js-ecshop/">#Vue.js  / ecshop</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <blockquote>
+<p>擔心上一篇篇幅太長，此篇文章要繼續來跟大家分享，購物車側欄該如何製作。<br>此專案主要使用的是 <strong>BS5 Offcanvas</strong> 元件來製作，那我們就開始吧！</p>
+</blockquote>
+<h3 id="購物車側欄-BS5-Offcanvas"><a href="#購物車側欄-BS5-Offcanvas" class="headerlink" title="購物車側欄 BS5 Offcanvas"></a>購物車側欄 BS5 Offcanvas</h3><h4 id="製作-navbar-的購物車圖示"><a href="#製作-navbar-的購物車圖示" class="headerlink" title="製作 navbar 的購物車圖示"></a>製作 <code>navbar</code> 的購物車圖示</h4><ul>
+<li>這邊也是使用到 BS5 icon 的購物車圖示，將程式碼新增到 <em><strong>ShopNavbar.vue</strong></em><img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/icon.png?alt=media&token=a7983ec6-e0ae-4fc1-890c-6c02c7b7d005"></li>
+<li>同時搭配 <strong>BS5 Badges 標籤元件</strong> 來呈現購物車商品數量，<a target="_blank" rel="noopener" href="https://bootstrap5.hexschool.com/docs/5.1/components/badge/">參考文件</a><img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/badge.png?alt=media&token=fa5a7449-2366-4776-8eb9-4b9fac403885"></li>
+<li>新增語法如下：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;text-end ms-2&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span> <span class="attr">class</span>=<span class="string">&quot; py-2 position-relative&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;bi bi-cart4 fs-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger&quot;</span>&gt;</span></span><br><span class="line">      &#123;&#123; carts.length &#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>完成後如下圖：<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/cart_demo.png?alt=media&token=1be124df-12a0-487a-aab3-9d42fcadd63e"></li>
+</ul>
+<h4 id="讀取購物車數量"><a href="#讀取購物車數量" class="headerlink" title="讀取購物車數量"></a>讀取購物車數量</h4><ul>
+<li>可以看到上方的語法，購物車數量其中帶入的是 <code>&#123;&#123; carts.length &#125;&#125;</code> </li>
+<li>首先需要在這個頁面抓到購物車的資料，並且從中抓出購物車的數量</li>
+<li>我們這裡使用的是 <code>Pinia</code> 套件，將購物車的資料統一在 <em><strong>cartStore.js</strong></em> 做管理</li>
+<li>並且在 <em><strong>ShopNavbar.vue</strong></em> 檔案中插入 <code>carts</code> 就可以抓到購物車的資料<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">computed</span>: &#123;</span><br><span class="line">  ...<span class="title function_">mapState</span>(cartStore, [<span class="string">&#x27;carts&#x27;</span>])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="點擊直接進入購物車頁面"><a href="#點擊直接進入購物車頁面" class="headerlink" title="點擊直接進入購物車頁面"></a>點擊直接進入購物車頁面</h4><ul>
+<li>先來製作比較簡單的，點擊購物車按鈕直接進到購物車頁面</li>
+<li>直接將元件用 <code>&lt;router-link&gt;&lt;/router-link&gt;</code> 包住，並且新增路由即可 <code>to=&quot;/shop/cart&quot;</code><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 直接進到購物車 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">class</span>=<span class="string">&quot;text-warning py-2 position-relative&quot;</span> <span class="attr">to</span>=<span class="string">&quot;/shop/cart&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;bi bi-cart4 fs-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123; carts.length &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="點擊開啟側欄顯示購物車商品"><a href="#點擊開啟側欄顯示購物車商品" class="headerlink" title="點擊開啟側欄顯示購物車商品"></a>點擊開啟側欄顯示購物車商品</h4><ul>
+<li>這個時候就會使用到 <strong>BS5 Offcanvas 畫布元件</strong></li>
+<li>我希望購物車側欄是從右邊開啟的，所以選擇 Toggle right offcanvas 這個畫布<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/bs5_canvas.png?alt=media&token=2f44fcb9-ca77-4e5c-9d55-4f8a69a67471"></li>
+<li>第一行程式碼是開啟畫布的按鈕，我們將其中的 <code>data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#cart&quot; aria-controls=&quot;offcanvasRight&quot;</code> 貼到購物車 icon <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 開啟購物車側欄 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span> <span class="attr">class</span>=<span class="string">&quot; py-2 position-relative&quot;</span> @<span class="attr">click.prevent</span>=<span class="string">&quot;$refs.cartCanvas.showCanvas()&quot;</span> <span class="attr">data-bs-toggle</span>=<span class="string">&quot;offcanvas&quot;</span> <span class="attr">data-bs-target</span>=<span class="string">&quot;#cart&quot;</span> <span class="attr">aria-controls</span>=<span class="string">&quot;offcanvasRight&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;bi bi-cart4 fs-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123; carts.length &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>接著將其餘的程式碼新增到 <em><strong>CartCanvas.vue</strong></em> 檔案中<ul>
+<li>可以針對購物車有商品、無商品時的顯示做調整</li>
+<li>也可新增移除商品的按鈕</li>
+<li>HTML<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;offcanvas offcanvas-end&quot;</span> <span class="attr">style</span>=<span class="string">&quot;max-width: 300px;&quot;</span> <span class="attr">tabindex</span>=<span class="string">&quot;-1&quot;</span> <span class="attr">id</span>=<span class="string">&quot;cart&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;shoppingCart&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;offcanvasCart&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;offcanvas-header bg-warning text-light position-relative&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h5</span> <span class="attr">id</span>=<span class="string">&quot;shoppingCart&quot;</span>&gt;</span>購物車<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn-close text-reset&quot;</span> <span class="attr">data-bs-dismiss</span>=<span class="string">&quot;offcanvas&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;Close&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;offcanvas-body mb-5&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card mb-3 border-0&quot;</span> <span class="attr">v-for</span>=<span class="string">&quot;cart in carts&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;cart.id&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row g-0&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-3 col-3 p-3 pe-0&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;border&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width:100%; height: 100%; background-size: cover; background-position: center&quot;</span></span></span><br><span class="line"><span class="tag">                  <span class="attr">:style</span>=<span class="string">&quot;&#123;backgroundImage: `url($&#123;cart.product.imageUrl&#125;)`&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-9 col-9&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-body d-flex flex-column justify-content-between&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">h5</span> <span class="attr">class</span>=<span class="string">&quot;card-title fs-6&quot;</span>&gt;</span>&#123;&#123; cart.product.title&#125;&#125;<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;card-text fs-7 fw-bold&quot;</span>&gt;</span>&#123;&#123; cart.qty &#125;&#125; x NT$&#123;&#123; $filters.currency(cart.product.price) &#125;&#125;</span><br><span class="line">                <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>JS<ul>
+<li>載入元件 <code>import Offcanvas from &#39;bootstrap/js/dist/offcanvas&#39;</code></li>
+<li>新增 <code>offcanvas</code> 元件相關方法<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Offcanvas</span> <span class="keyword">from</span> <span class="string">&#x27;bootstrap/js/dist/offcanvas&#x27;</span></span><br><span class="line"><span class="keyword">import</span> cartStore <span class="keyword">from</span> <span class="string">&#x27;@/stores/cartStore&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; mapState, mapActions &#125; <span class="keyword">from</span> <span class="string">&#x27;pinia&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">computed</span>: &#123;</span><br><span class="line">    ...<span class="title function_">mapState</span>(cartStore, [<span class="string">&#x27;carts&#x27;</span>, <span class="string">&#x27;finalTotal&#x27;</span>, <span class="string">&#x27;total&#x27;</span>])</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    ...<span class="title function_">mapActions</span>(cartStore, [<span class="string">&#x27;getCart&#x27;</span>, <span class="string">&#x27;updateCart&#x27;</span>, <span class="string">&#x27;delProduct&#x27;</span>]),</span><br><span class="line">    <span class="title function_">goToCart</span> () &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(<span class="string">&#x27;/shop/cart&#x27;</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">showCanvas</span> () &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">offcanvas</span>.<span class="title function_">show</span>()</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">hideCanvas</span> () &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">offcanvas</span>.<span class="title function_">hide</span>()</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">toggleCanvas</span> () &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">offcanvas</span>.<span class="title function_">toggle</span>()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title function_">mounted</span> () &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">offcanvas</span> = <span class="keyword">new</span> <span class="title class_">Offcanvas</span>(<span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">offcanvasCart</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>完成後如圖所示<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/cartcanvas_demo.png?alt=media&token=1180435f-8856-4ff8-b3b1-d092c178350c"></li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Huiwen-Huang" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Emma Huang<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

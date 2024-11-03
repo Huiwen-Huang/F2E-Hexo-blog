@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Emma Huang"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vue.js ecshop 7.使用 mixin 整合相同程式碼"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hey! It&#39;s Emma!"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Vue.js ecshop 7.使用 mixin 整合相同程式碼 - Hey! It&#39;s Emma!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="img/logo.png"/>
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/blog/">Emma's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/">
+                            
+                                HOME
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/archives">
+                            
+                                Blogs
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Huiwen-Huang">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/blog/img/ecshop-7.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Vue.js ecshop 7.使用 mixin 整合相同程式碼</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-08-20
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/Vue-js-ecshop/">#Vue.js  / ecshop</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <blockquote>
+<p>前篇文章我們分享到新增、編輯商品，說明元件與元件之間的溝通傳遞方式。<br>此篇我們要進一步分享，如何 <strong>整合多個元件都會使用到的相同程式碼</strong>，讓開發更有效率，且進一步套用至 <strong>刪除商品</strong> 的功能中，那我們就開始吧！</p>
+</blockquote>
+<h3 id="使用-mixin-整合相同程式碼"><a href="#使用-mixin-整合相同程式碼" class="headerlink" title="使用 mixin 整合相同程式碼"></a>使用 <code>mixin</code> 整合相同程式碼</h3><ul>
+<li>首先在 <code>src &gt; components</code> 新增<strong>刪除商品</strong>要使用到的 <em><strong>DelModal.vue</strong></em></li>
+<li>接著將 <em><strong>DelModal.vue</strong></em> 與 <em><strong>ProdauctModal.vue</strong></em> 都會需要用到的 <strong>相同程式碼片段</strong> 新增到 <code>src &gt; mixins</code> 中新增的 <em><strong>modalMixins.js</strong></em> 檔案中<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Modal</span> <span class="keyword">from</span> <span class="string">&#x27;bootstrap/js/dist/modal&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="title function_">showModal</span> () &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">modal</span>.<span class="title function_">show</span>()</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">hideModal</span> () &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">modal</span>.<span class="title function_">hide</span>()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title function_">mounted</span> () &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">modal</span> = <span class="keyword">new</span> <span class="title class_">Modal</span>(<span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">modal</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>再來回到 <em><strong>DelModal.vue</strong></em> 與 <em><strong>ProdauctModal.vue</strong></em> <ul>
+<li>移除相同的程式碼片段</li>
+<li>匯入 <em><strong>modalMixins.js</strong></em>： <code>import modalMixins from &#39;@/mixins/modalMixins&#39;</code></li>
+<li>接著新增 <strong><code>mixins: [modalMixins]</code></strong> 即可完成取代<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> modalMixins <span class="keyword">from</span> <span class="string">&#x27;@/mixins/modalMixins&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">data</span> () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">modal</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">mixins</span>: [modalMixins]</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="刪除商品"><a href="#刪除商品" class="headerlink" title="刪除商品"></a>刪除商品</h3><p>接著我們就繼續將刪除商品的模板完成吧！</p>
+<ul>
+<li>新增刪除商品 modal<ul>
+<li>新增 <em><strong>DelModal.vue</strong></em> 製作彈窗模板<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- Modal --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;modal fade&quot;</span> <span class="attr">id</span>=<span class="string">&quot;exampleModal&quot;</span> <span class="attr">tabindex</span>=<span class="string">&quot;-1&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;exampleModalLabel&quot;</span> <span class="attr">aria-hidden</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">ref</span>=<span class="string">&quot;modal&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;modal-dialog&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;modal-content&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;modal-header bg-danger&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h5</span> <span class="attr">class</span>=<span class="string">&quot;modal-title text-light&quot;</span> <span class="attr">id</span>=<span class="string">&quot;exampleModalLabel&quot;</span>&gt;</span>刪除<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn-close&quot;</span> <span class="attr">data-bs-dismiss</span>=<span class="string">&quot;modal&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;Close&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;modal-body&quot;</span>&gt;</span></span><br><span class="line">          是否刪除此商品，刪除後將無法恢復！</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;modal-footer&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-outline-secondary&quot;</span> <span class="attr">data-bs-dismiss</span>=<span class="string">&quot;modal&quot;</span>&gt;</span>取消<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-danger &quot;</span>&gt;</span>確認刪除<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>新增 <code>props</code> 抓取外層的商品資料<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> modalMixins <span class="keyword">from</span> <span class="string">&#x27;@/mixins/modalMixins&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">props</span>: &#123;</span><br><span class="line">    <span class="attr">item</span>: &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title function_">data</span> () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">modal</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">mixins</span>: [modalMixins]</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>回到 <em><strong>ProductsPage.vue</strong></em> 插入元件 <em><strong>DelModal.vue</strong></em><ul>
+<li>針對 <code>&lt;DelModal&gt;&lt;/DelModal&gt;</code> 新增 <code>ref=&quot;delModal&quot;</code></li>
+<li>新增 <code>props</code>：<code>:item=&quot;tempProduct&quot;</code><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DelModal</span> <span class="attr">ref</span>=<span class="string">&quot;delModal&quot;</span> </span></span><br><span class="line"><span class="tag">              <span class="attr">:item</span>=<span class="string">&quot;tempProduct&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">DelModal</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="title class_">DelModal</span> <span class="keyword">from</span> <span class="string">&#x27;../components/DelModal.vue&#x27;</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">...</span></span><br><span class="line"><span class="language-javascript"><span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">ProductModal</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">DelModal</span></span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">...</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>在 <em><strong>ProductsPage.vue</strong></em> 新增 <strong>開啟刪除彈窗</strong> 的函式 <code>openDelModal()</code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">openDelModal</span> (item) &#123;</span><br><span class="line">  <span class="comment">// 讀取該筆商品資料</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">tempProduct</span> = &#123; ...item &#125;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">delModal</span>.<span class="title function_">showModal</span>()</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<ul>
+<li>同步新增觸發事件到外層的 <strong>刪除按鈕</strong> 中<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-outline-danger btn-sm&quot;</span></span></span><br><span class="line"><span class="tag">        @<span class="attr">click</span>=<span class="string">&quot;openDelModal(item)&quot;</span>&gt;</span>刪除<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>接著針對 <em><strong>DelModal.vue</strong></em> 內層刪除彈窗的 <strong>確認刪除</strong> 按鈕新增觸發外部事件 <code>emit</code>：<code>@click=&quot;$emit(&#39;del-item&#39;)&quot;</code><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-danger&quot;</span></span></span><br><span class="line"><span class="tag">        @<span class="attr">click</span>=<span class="string">&quot;$emit(&#x27;del-item&#x27;)&quot;</span>&gt;</span>確認刪除<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>同步回到 <em><strong>ProductsPage.vue</strong></em> 新增刪除商品事件 <code>delProduct()</code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 刪除商品</span></span><br><span class="line"><span class="title function_">delProduct</span> () &#123;</span><br><span class="line">  <span class="keyword">const</span> api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/admin/product/<span class="subst">$&#123;<span class="variable language_">this</span>.tempProduct.id&#125;</span>`</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">true</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="title function_">delete</span>(api)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">data</span>)</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">delModal</span>.<span class="title function_">hideModal</span>()</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">false</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">getProducts</span>()</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>並且為 <code>&lt;DelModal&gt;&lt;/DelModal&gt;</code> 加入 <code>emit</code> 事件<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">DelModal</span> <span class="attr">ref</span>=<span class="string">&quot;delModal&quot;</span> </span></span><br><span class="line"><span class="tag">          <span class="attr">:item</span>=<span class="string">&quot;tempProduct&quot;</span></span></span><br><span class="line"><span class="tag">          @<span class="attr">del-item</span>=<span class="string">&quot;delProduct&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">DelModal</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<p>完成後，點擊產品列表頁面的 <strong>刪除</strong> 按鈕就會開啟刪除彈窗，接著點擊 <strong>確認刪除</strong> 按鈕就可以成功刪除商品囉！<br><img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/delProduct.gif?alt=media&token=94e592fa-ad12-40ce-a5b5-23b98c32f3ae" width=100%></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Huiwen-Huang" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Emma Huang<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

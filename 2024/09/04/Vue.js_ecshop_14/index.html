@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Emma Huang"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vue.js ecshop 14.商店產品列表頁面製作"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hey! It&#39;s Emma!"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Vue.js ecshop 14.商店產品列表頁面製作 - Hey! It&#39;s Emma!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="img/logo.png"/>
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/blog/">Emma's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/">
+                            
+                                HOME
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/archives">
+                            
+                                Blogs
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Huiwen-Huang">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/blog/img/ecshop-14.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Vue.js ecshop 14.商店產品列表頁面製作</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-09-04
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/Vue-js-ecshop/">#Vue.js  / ecshop</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <blockquote>
+<p>從這篇文章開始我們要正式進到<strong>商店前台</strong>的頁面製作啦！<br>首先我們一樣先從產品列表頁面開始製作，那我們就開始吧！</p>
+</blockquote>
+<h3 id="商店前台頁面編輯"><a href="#商店前台頁面編輯" class="headerlink" title="商店前台頁面編輯"></a>商店前台頁面編輯</h3><ul>
+<li>首先在 <code>src &gt; views</code> 新增以下檔案：<ul>
+<li>前台總覽頁面：<em><strong>ShopBoard.vue</strong></em></li>
+<li>前台商品列表頁：<em><strong>ShopProductsList.vue</strong></em> </li>
+<li>前台單一商品頁：<em><strong>ShopPerProduct.vue</strong></em></li>
+</ul>
+</li>
+<li>接著進行路由設定：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">path</span>: <span class="string">&#x27;/shop&#x27;</span>,</span><br><span class="line">  <span class="attr">component</span>: <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;../views/ShopBoard.vue&#x27;</span>),</span><br><span class="line">  <span class="attr">children</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;products&#x27;</span>,</span><br><span class="line">      <span class="attr">component</span>: <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;../views/ShopProductsList.vue&#x27;</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;product/:productId&#x27;</span>,</span><br><span class="line">      <span class="attr">component</span>: <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;../views/ShopPerProduct.vue&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="ShopBoard-vue-商店總覽頁面編輯"><a href="#ShopBoard-vue-商店總覽頁面編輯" class="headerlink" title="ShopBoard.vue 商店總覽頁面編輯"></a>ShopBoard.vue 商店總覽頁面編輯</h4><ul>
+<li>新增 <code>navbar</code> 、<code>footer</code></li>
+<li>插入 <code>toast</code> 訊息回饋<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 此為 navbar 內容過程不贅述 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ToastList</span>&gt;</span><span class="tag">&lt;/<span class="name">ToastList</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">CartCanvas</span> <span class="attr">ref</span>=<span class="string">&quot;cartCanvas&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">CartCanvas</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">NavCanvas</span> <span class="attr">ref</span>=<span class="string">&quot;offcanvasNavbar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">NavCanvas</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ShopFooter</span>&gt;</span><span class="tag">&lt;/<span class="name">ShopFooter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> emitter <span class="keyword">from</span> <span class="string">&#x27;@/methods/emitter&#x27;</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="title class_">ToastList</span> <span class="keyword">from</span> <span class="string">&#x27;@/components/ToastList.vue&#x27;</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> cartStore <span class="keyword">from</span> <span class="string">&#x27;@/stores/cartStore&#x27;</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="title class_">CartCanvas</span> <span class="keyword">from</span> <span class="string">&#x27;../components/CartCanvas.vue&#x27;</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> &#123; mapState, mapActions &#125; <span class="keyword">from</span> <span class="string">&#x27;pinia&#x27;</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="title class_">NavCanvas</span> <span class="keyword">from</span> <span class="string">&#x27;../components/NavCanvas.vue&#x27;</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="title class_">ShopFooter</span> <span class="keyword">from</span> <span class="string">&#x27;@/components/ShopFooter.vue&#x27;</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">ToastList</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">CartCanvas</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">NavCanvas</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">ShopFooter</span></span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">provide</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      emitter</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">computed</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    ...<span class="title function_">mapState</span>(cartStore, [<span class="string">&#x27;carts&#x27;</span>])</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 取得購物車數量</span></span></span><br><span class="line"><span class="language-javascript">    ...<span class="title function_">mapActions</span>(cartStore, [<span class="string">&#x27;getCart&#x27;</span>])</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">created</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">this</span>.<span class="title function_">getCart</span>()</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/shop.png?alt=media&token=de8a6301-04e8-40cd-ba77-c935d945a4db"></li>
+</ul>
+<h4 id="ShopProductsList-vue-產品列表頁面編輯"><a href="#ShopProductsList-vue-產品列表頁面編輯" class="headerlink" title="ShopProductsList.vue 產品列表頁面編輯"></a>ShopProductsList.vue 產品列表頁面編輯</h4><ul>
+<li>新增商品列表表格</li>
+<li>插入 <code>LoadingOverlay</code> loading 效果</li>
+<li>插入 <code>PaginationCard</code> 頁籤</li>
+<li>透過 <code>this.$router.push(產品頁面路由)</code> <strong>進到單一商品頁</strong><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">LoadingOverlay</span> <span class="attr">:active</span>=<span class="string">&quot;isLoading&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">LoadingOverlay</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container d-flex justify-content-center align-items-center flex-column&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 產品列表 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row mt-4&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">&quot;table align-middle&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">th</span>&gt;</span>圖片<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">th</span>&gt;</span>商品名稱<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">th</span>&gt;</span>價格<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">th</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span> <span class="attr">v-for</span>=<span class="string">&quot;item in products&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;item.id&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">td</span> <span class="attr">style</span>=<span class="string">&quot;width:200px&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;height: 150px; background-size: cover; background-position: top&quot;</span></span></span><br><span class="line"><span class="tag">                  <span class="attr">:style</span>=<span class="string">&quot;&#123;backgroundImage: `url($&#123;item.imageUrl&#125;)`&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123; item.title &#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123; item.price &#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-outline-secondary&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;getProduct(item.id)&quot;</span>&gt;</span>查看更多<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-outline-danger&quot;</span>&gt;</span>加入購物車<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 頁籤 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">PaginationCard</span> <span class="attr">:pages</span>=<span class="string">&quot;pagination&quot;</span> @<span class="attr">emit-pages</span>=<span class="string">&quot;getProducts&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">PaginationCard</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="title class_">PaginationCard</span> <span class="keyword">from</span> <span class="string">&#x27;@/components/PaginationCard.vue&#x27;</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">data</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">products</span>: [],</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">pagination</span>: &#123;&#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">isLoading</span>: <span class="literal">false</span></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">PaginationCard</span></span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 取得產品列表</span></span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">getProducts</span> (page = <span class="number">1</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/products/?page=<span class="subst">$&#123;page&#125;</span>`</span></span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">true</span></span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.<span class="property">$http</span>.<span class="title function_">get</span>(api)</span></span><br><span class="line"><span class="language-javascript">        .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">products</span> = res.<span class="property">data</span>.<span class="property">products</span></span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">pagination</span> = res.<span class="property">data</span>.<span class="property">pagination</span></span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">false</span></span></span><br><span class="line"><span class="language-javascript">          <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">data</span>)</span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 進入單一商品介紹頁</span></span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">getProduct</span> (id) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(<span class="string">`/shop/product/<span class="subst">$&#123;id&#125;</span>`</span>)</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">created</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">this</span>.<span class="title function_">getProducts</span>()</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/shop_product.png?alt=media&token=d549f71a-2cac-4435-bd4d-05d651bc5751"></li>
+</ul>
+<h4 id="ShopPerProduct-vue-單一商品頁面編輯"><a href="#ShopPerProduct-vue-單一商品頁面編輯" class="headerlink" title="ShopPerProduct.vue 單一商品頁面編輯"></a>ShopPerProduct.vue 單一商品頁面編輯</h4><ul>
+<li>插入 <code>LoadingOverlay</code> loading 樣式</li>
+<li>透過<strong>路由去抓商品 ID</strong> <code>this.$route.params.productId</code> ，以取得商品資訊<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">LoadingOverlay</span> <span class="attr">:active</span>=<span class="string">&quot;isLoading&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">LoadingOverlay</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container mt-4&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">nav</span> <span class="attr">aria-label</span>=<span class="string">&quot;breadcrumb&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;breadcrumb&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;breadcrumb-item&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/shop/products&quot;</span>&gt;</span>全部商品<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;breadcrumb-item active&quot;</span> <span class="attr">aria-current</span>=<span class="string">&quot;page&quot;</span>&gt;</span>&#123;&#123; product.title &#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-8&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123; product.title &#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>商品描述：Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, suscipit animi aut, consequatur voluptate nam molestiae praesentium maiores error eligendi quisquam at facere et, ducimus non accusantium dolorem dolore provident.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;height: 800px; background-size: cover; background-position: top&quot;</span></span></span><br><span class="line"><span class="tag">                  <span class="attr">:style</span>=<span class="string">&quot;&#123;backgroundImage: `url($&#123;product.imageUrl&#125;)`&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-4&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;fs-6 mb-0&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">del</span>&gt;</span>原價 NT$&#123;&#123; product.origin_price &#125;&#125;<span class="tag">&lt;/<span class="name">del</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;fs-5&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span>現在只要 NT$&#123;&#123; product.price &#125;&#125;<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-outline-danger&quot;</span>&gt;</span>加入購物車<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">data</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">product</span>: &#123;&#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">isLoading</span>: <span class="literal">false</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">id</span>: <span class="string">&#x27;&#x27;</span></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">getProduct</span> (id) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/product/<span class="subst">$&#123;id&#125;</span>`</span></span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">true</span></span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.<span class="property">$http</span>.<span class="title function_">get</span>(api).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">product</span> = res.<span class="property">data</span>.<span class="property">product</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">false</span></span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span></span><br><span class="line"><span class="language-javascript">      &#125;)</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">created</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 透過路由去抓商品 ID</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">this</span>.<span class="property">id</span> = <span class="variable language_">this</span>.<span class="property">$route</span>.<span class="property">params</span>.<span class="property">productId</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">this</span>.<span class="title function_">getProduct</span>(<span class="variable language_">this</span>.<span class="property">id</span>)</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/shop-perproduct.png?alt=media&token=c78cc313-572c-442b-9774-e9de95e1c571"></li>
+</ul>
+<h3 id="Bootstrap-Icon"><a href="#Bootstrap-Icon" class="headerlink" title="Bootstrap Icon"></a>Bootstrap Icon</h3><p>講到商品頁面就不能少了加入購物車的按鈕，像這類型的 icon 圖示我們也可以在 Bootstrap 找到元件來做使用！<a target="_blank" rel="noopener" href="https://icons.getbootstrap.com/">參考文件</a></p>
+<ul>
+<li>在這個專案我們是直接透過 npm 來安裝套件做使用：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i bootstrap-icons</span><br></pre></td></tr></table></figure></li>
+<li>接著回到 <em><strong>main.js</strong></em> 匯入<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;bootstrap-icons/font/bootstrap-icons.css&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>完成後即可開始使用 BS5 icons<ul>
+<li>找到喜歡的 icon，進到內容頁可以看到右側的 <code>icon font</code> ，複製起來貼到 <tempalte></template> 指定位置就可以囉！<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/bs5_icon.png?alt=media&token=f5c575bf-a586-477e-b45b-04b756f87309"></li>
+</ul>
+</li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Huiwen-Huang" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Emma Huang<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

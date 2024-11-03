@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Emma Huang"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vue.js ecshop 1.專案建立"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hey! It&#39;s Emma!"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Vue.js ecshop 1.專案建立 - Hey! It&#39;s Emma!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="img/logo.png"/>
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/blog/">Emma's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/">
+                            
+                                HOME
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/archives">
+                            
+                                Blogs
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Huiwen-Huang">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/blog/img/ecshop-1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Vue.js ecshop 1.專案建立</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-08-12
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/Vue-js-ecshop/">#Vue.js  / ecshop</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <hr>
+<h3 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a><strong>前情提要</strong></h3><hr>
+<p>這是艾瑪在上完六角的 Vue3 課程後，迎來的第一個挑戰：<strong>電商網站</strong>。<br>在這次的專案中，老師有提供 API 文件讓我們進行資料抓取，由於這部分屬於六角學院的資產，在筆記中就不會特別分享，還請見諒。</p>
+<p>而此篇文章會從建立 Vue cli 專案開始進行分享，艾瑪並非專業，主要是希望可以記錄自己學習的內容，也分享給有需要的夥伴做參考，若有錯誤也歡迎指正，謝謝！</p>
+<h3 id="建立-Vue-Cli-專案"><a href="#建立-Vue-Cli-專案" class="headerlink" title="建立 Vue Cli 專案"></a><strong>建立 Vue Cli 專案</strong></h3><hr>
+<h4 id="安裝參考官方文件"><a href="#安裝參考官方文件" class="headerlink" title="安裝參考官方文件"></a>安裝參考<a target="_blank" rel="noopener" href="https://cli.vuejs.org/zh/guide/installation.html">官方文件</a></h4><ul>
+<li>於終端機輸入 <strong><code>npm install -g @vue/cli</code></strong> 進行安裝</li>
+<li>若要查看版本號可輸入 <strong><code>vue -V</code></strong> ，同時可以確認是否有安裝成功</li>
+</ul>
+<h4 id="創建專案參考官方文件"><a href="#創建專案參考官方文件" class="headerlink" title="創建專案參考官方文件"></a>創建專案參考<a target="_blank" rel="noopener" href="https://cli.vuejs.org/zh/guide/creating-a-project.html">官方文件</a></h4><ul>
+<li><p>於終端機輸入 <strong><code>vue create + 專案名稱</code></strong> 即可建立新的專案</p>
+</li>
+<li><p>接著需完成此專案所需的相關設定</p>
+<ul>
+<li>選擇 <strong>Manually select features</strong> 手動進行設定   <img src="https://cli.vuejs.org/cli-new-project.png" width="100%"></li>
+<li>此專案會使用到 <strong>Vue Router</strong> 所以要選擇 <strong>Router</strong>  <img src="https://cli.vuejs.org/cli-select-features.png" width="100%"></li>
+</ul>
+<p>  圖片來源：<a target="_blank" rel="noopener" href="https://cli.vuejs.org/zh/guide/creating-a-project.html#vue-create">Vue cli 創建官方文件 </a></p>
+</li>
+</ul>
+<h4 id="各資料夾用途"><a href="#各資料夾用途" class="headerlink" title="各資料夾用途"></a>各資料夾用途</h4><ul>
+<li>&#x2F;node_modules：用以存放<strong>套件</strong>相關文件</li>
+<li>&#x2F;public：主要放<strong>純靜態檔</strong>，當資源連到檔案中，不需要經過編譯</li>
+<li>&#x2F;src：<strong>需要經過編譯的檔案</strong>，通常會經過壓縮</li>
+</ul>
+<h4 id="如何區分資料放置位置"><a href="#如何區分資料放置位置" class="headerlink" title="如何區分資料放置位置"></a>如何區分資料放置位置</h4><ul>
+<li>&#x2F;public<ul>
+<li>主視覺圖片檔（對畫質很刁鑽）</li>
+<li>外部 UI CSS</li>
+</ul>
+</li>
+<li>&#x2F;src<ul>
+<li>外部 libs JS</li>
+<li>自己寫的 SCSS</li>
+</ul>
+</li>
+</ul>
+<h4 id="進入開發模式"><a href="#進入開發模式" class="headerlink" title="進入開發模式"></a>進入開發模式</h4><ul>
+<li>於終端機輸入 <strong><code>npm run serve</code></strong></li>
+<li>可以看到 Local、Network 兩組網址<ul>
+<li>個人開發可直接進入 Local： <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080/</a> </li>
+<li>小組開發可點擊 Network： <a target="_blank" rel="noopener" href="http://192.168.0.101:8080/">http://192.168.0.101:8080/</a>  <img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/npm-run-serve.png?alt=media&token=742b5549-1184-4db1-9ba2-303b0c761b70" width="100%"></li>
+<li>進到 <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080/</a> 看到下方畫面，表示已經完成 Vue 專案的建立  <img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/vue_cli.png?alt=media&token=4ed8f7d8-8127-450d-b2ee-648008e5c23e" width="100%"></li>
+</ul>
+</li>
+</ul>
+<p>目前我們已經成功建立 Vue Cli 專案，下篇文章我們將繼續製作 ecshop！ </p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Huiwen-Huang" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Emma Huang<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

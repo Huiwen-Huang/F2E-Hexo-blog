@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Emma Huang"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vue3 SweetAlert2"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hey! It&#39;s Emma!"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Vue3 SweetAlert2 - Hey! It&#39;s Emma!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="img/logo.png"/>
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/blog/">Emma's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/">
+                            
+                                HOME
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/archives">
+                            
+                                Blogs
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Huiwen-Huang">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/blog/img/sweetAlert.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Vue3 SweetAlert2</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-10-10
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/第三方套件分享/">#第三方套件分享</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <blockquote>
+<p>這篇文章會與大家分享 <strong>SweetAlert2 彈跳視窗套件</strong> 的相關使用說明。<br>關於 HTML 頁面的使用、以及 Vue3 在 Options API &#x2F; Composition API 的使用都會一併分享給大家，那我們就開始吧！</p>
+</blockquote>
+<p>當網頁有需要美觀又可客製化的彈跳視窗，第一首選我會推薦 <strong><a target="_blank" rel="noopener" href="https://sweetalert2.github.io/">SweetAlert2</a><strong>。<br><strong><a target="_blank" rel="noopener" href="https://sweetalert2.github.io/">SweetAlert2</a></strong> 便於使用在各種情境，</strong>不但 icon、文字、按鈕的顏色有提供客製化調整，連彈窗本身的主題顏色都是可以改變的</strong>，幫助我們輕鬆提升網站風格一致性！</p>
+<h2 id="HTML-頁面使用方式"><a href="#HTML-頁面使用方式" class="headerlink" title="HTML 頁面使用方式"></a>HTML 頁面使用方式</h2><h3 id="1-安裝方式"><a href="#1-安裝方式" class="headerlink" title="1. 安裝方式"></a>1. 安裝方式</h3><p>透過 CDN 的方式新增於 <em><strong>HTML</strong></em> 檔案的 <code>&lt;body&gt;&lt;/body&gt;</code> 內：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/sweetalert2@11&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-開始使用"><a href="#2-開始使用" class="headerlink" title="2. 開始使用"></a>2. 開始使用</h3><p>方便展示，這邊直接將 <code>&lt;script&gt;&lt;/script&gt;</code> 新增在 <em><strong>HTML</strong></em> 檔案中：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Swal</span>.<span class="title function_">fire</span>(&#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;Error!&#x27;</span>,</span><br><span class="line">    <span class="attr">text</span>: <span class="string">&#x27;Do you want to continue&#x27;</span>,</span><br><span class="line">    <span class="attr">icon</span>: <span class="string">&#x27;error&#x27;</span>,</span><br><span class="line">    <span class="attr">confirmButtonText</span>: <span class="string">&#x27;NO&#x27;</span></span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="完整程式碼"><a href="#完整程式碼" class="headerlink" title="完整程式碼"></a>完整程式碼</h4><p><img src="https://hackmd.io/_uploads/ryctXV90A.png" alt="image"></p>
+<h4 id="完成後彈跳視窗"><a href="#完成後彈跳視窗" class="headerlink" title="完成後彈跳視窗"></a>完成後彈跳視窗</h4><p><img src="https://hackmd.io/_uploads/S1NyN4cA0.png" alt="image"></p>
+<h2 id="Vue-CLI-使用方式"><a href="#Vue-CLI-使用方式" class="headerlink" title="Vue CLI 使用方式"></a>Vue CLI 使用方式</h2><p>這部分主要分享 <strong>Vue3</strong> 搭配 <strong>Vue CLI</strong> 的操作，其中分為 <strong>Options API &#x2F; Composition API</strong> 兩種撰寫方式給大家參考。</p>
+<h3 id="1-安裝方式-1"><a href="#1-安裝方式-1" class="headerlink" title="1. 安裝方式"></a>1. 安裝方式</h3><ul>
+<li>首先使用 <strong>npm</strong> 進行安裝，<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/vue-sweetalert2">參考文件</a><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -S vue-sweetalert2</span><br></pre></td></tr></table></figure></li>
+<li>完成後回到 <em><strong>main.js</strong></em> 進行元件註冊<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">VueSweetalert2</span> <span class="keyword">from</span> <span class="string">&#x27;vue-sweetalert2&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;sweetalert2/dist/sweetalert2.min.css&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line">app.<span class="title function_">use</span>(<span class="title class_">VueSweetalert2</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="2-Options-API-開始使用"><a href="#2-Options-API-開始使用" class="headerlink" title="2. Options API - 開始使用"></a>2. Options API - 開始使用</h3><p>選擇要顯示彈窗的頁面進行設定，這邊我們以 <em><strong>HomeView.vue</strong></em> 為例：</p>
+<ul>
+<li>透過  <code>this.$swal()</code> 去包覆彈窗內容，這邊以基本會使用到的內容為例，若需更多彈窗內容可以參考<a target="_blank" rel="noopener" href="https://sweetalert2.github.io/#configuration">官方文件</a>。<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">showAlert</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.$swal(&#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">title</span>: <span class="string">&#x27;Warning!!!!&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">text</span>: <span class="string">&#x27;Do you want to continue&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">icon</span>: <span class="string">&#x27;warning&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">confirmButtonText</span>: <span class="string">&#x27;OK&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;)</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">mounted</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">this</span>.<span class="title function_">showAlert</span>()</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>若是喜歡一行寫完的人，這裡也是可以進行縮寫沒問題的！<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">showAlert</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.$swal(<span class="string">&#x27;Warning!&#x27;</span>, <span class="string">&#x27;Do you want to continue&#x27;</span>, <span class="string">&#x27;warning&#x27;</span>, <span class="string">&#x27;OK&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">mounted</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">this</span>.<span class="title function_">showAlert</span>()</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="完成後彈跳視窗-1"><a href="#完成後彈跳視窗-1" class="headerlink" title="完成後彈跳視窗"></a>完成後彈跳視窗</h4><img src="https://hackmd.io/_uploads/HksRw490A.png" alt="image"></li>
+<li>別忘了我們剛剛有提到樣式都是可以客製化的，這邊就直接來調整 <strong>icon、文字、按鈕</strong>的顏色：<ul>
+<li>這邊透過 <code>color</code>、<code>iconColor</code>、<code>confirmButtonColor</code> 來進行相關顏色調整，若有更多客製需求都可以參考官方 <a target="_blank" rel="noopener" href="https://sweetalert2.github.io/#configuration">#Configuration Params</a><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.$swal(&#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;Warning!!!!&#x27;</span>,</span><br><span class="line">    <span class="attr">text</span>: <span class="string">&#x27;Do you want to continue&#x27;</span>,</span><br><span class="line">    <span class="attr">color</span>: <span class="string">&#x27;#D57A66&#x27;</span>,</span><br><span class="line">    <span class="attr">icon</span>: <span class="string">&#x27;warning&#x27;</span>,</span><br><span class="line">    <span class="attr">iconColor</span>: <span class="string">&#x27;#E9D985&#x27;</span>,</span><br><span class="line">    <span class="attr">confirmButtonText</span>: <span class="string">&#x27;OK&#x27;</span>,</span><br><span class="line">    <span class="attr">confirmButtonColor</span>: <span class="string">&#x27;#6D9BA8&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="修改樣式後彈跳視窗"><a href="#修改樣式後彈跳視窗" class="headerlink" title="修改樣式後彈跳視窗"></a>修改樣式後彈跳視窗</h4><p><img src="https://hackmd.io/_uploads/ry6pYN900.png" alt="image"></p>
+</li>
+</ul>
+<h3 id="2-Composition-API-開始使用"><a href="#2-Composition-API-開始使用" class="headerlink" title="2. Composition API - 開始使用"></a>2. Composition API - 開始使用</h3><p>選擇要顯示彈窗的頁面進行設定，這邊我們以 <em><strong>HomeView.vue</strong></em> 為例：</p>
+<ul>
+<li>首先 <em><strong>import</strong></em> <code>Swal</code> 到 <em><strong>HomeView.vue</strong></em></li>
+<li>接著透過 <code>Swal.fire()</code> 來新增彈跳視窗</li>
+<li>這邊在 <code>onMounted()</code> 呼叫該彈窗，一進到頁面就可以看到</li>
+<li>最後記得要 <code>return</code> <em><strong>showAlert</strong></em><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="title class_">Swal</span> <span class="keyword">from</span> <span class="string">&#x27;sweetalert2&#x27;</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">setup</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> <span class="title function_">showAlert</span> = (<span class="params"></span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="title class_">Swal</span>.<span class="title function_">fire</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">title</span>: <span class="string">&#x27;Hello!&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">text</span>: <span class="string">&#x27;Welcome to my website&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">icon</span>: <span class="string">&#x27;success&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">confirmButtonText</span>: <span class="string">&#x27;continue&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;)</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">onMounted</span>(<span class="function">() =&gt;</span> <span class="title function_">showAlert</span>())</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      showAlert</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="完成後彈跳視窗-2"><a href="#完成後彈跳視窗-2" class="headerlink" title="完成後彈跳視窗"></a>完成後彈跳視窗</h4><img src="https://hackmd.io/_uploads/B1CZzB5AA.png" alt="image"></li>
+</ul>
+<p>以上就是今天分享的 <strong>SweetAlert2</strong> 三種撰寫方式給大家參考！</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Huiwen-Huang" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Emma Huang<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

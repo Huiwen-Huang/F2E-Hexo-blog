@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Emma Huang"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vue.js ecshop 10.mitt &amp; BS5 Toast 訊息回饋"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hey! It&#39;s Emma!"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Vue.js ecshop 10.mitt &amp; BS5 Toast 訊息回饋 - Hey! It&#39;s Emma!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="img/logo.png"/>
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/blog/">Emma's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/">
+                            
+                                HOME
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/archives">
+                            
+                                Blogs
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Huiwen-Huang">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/blog/img/ecshop-10.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Vue.js ecshop 10.mitt & BS5 Toast 訊息回饋</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-08-24
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/Vue-js-ecshop/">#Vue.js  / ecshop</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <blockquote>
+<p>此篇要分享的是訊息回饋經常會使用的工具 <strong>BS5 Toast 元件</strong>。<br>那我們為什麼會需要加入訊息回饋呢？當然是為了提升使用者體驗！</p>
+<p>我們希望讓用戶在操作時透過回饋提示知道當下操作的結果，例如 <strong>加入購物車</strong> 這個行爲，點擊後若能夠跳出 <strong>成功加入購物車</strong> 等訊息回饋，對於使用者體驗來說就會是大大的加分唷，那我們就開始吧！</p>
+</blockquote>
+<h3 id="Mitt-跨元件資料傳遞（Event-Bus）"><a href="#Mitt-跨元件資料傳遞（Event-Bus）" class="headerlink" title="Mitt 跨元件資料傳遞（Event Bus）"></a>Mitt 跨元件資料傳遞（Event Bus）</h3><p>首先要提先跟大家分享的是 <code>mitt</code> 套件，主要用以<strong>整合跨元件之間的訊息傳遞</strong>做使用，<a target="_blank" rel="noopener" href="https://github.com/developit/mitt">參考文件</a>。</p>
+<ul>
+<li>在此專案的 <code>mitt</code> 使用會新增在後台系統最外層的 <em><strong>DashBoard.vue</strong></em> 檔案中<ul>
+<li>內層若要使用 <code>mitt</code> 需要透過 <code>inject</code> 的方式進行讀取</li>
+<li>以此篇文章為例，主要是 <em><strong>ProductsPage.vue</strong></em> 與 <em><strong>ToastList.vue</strong></em> 兩個元件需要進行溝通，故須在兩個元件中新增 <code>inject</code><img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/mitt_inject.png?alt=media&token=ba187476-2385-48d1-b2ac-50f8fe0eec6f"></li>
+</ul>
+</li>
+<li>那我們就從安裝開始<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mitt</span><br></pre></td></tr></table></figure></li>
+<li>接著在 <code>src</code> 新增 <code>methods &gt; emitter.js</code> 讓內層元件都可以使用到<ul>
+<li>啟用 <code>mitt</code> 且匯出使用：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> mitt <span class="keyword">from</span> <span class="string">&#x27;mitt&#x27;</span> <span class="comment">// 啟用 mitt</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> emitter = <span class="title function_">mitt</span>() <span class="comment">// 固定用法</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> emitter <span class="comment">// 匯出</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>再來回到 <em><strong>DashBoard.vue</strong></em> 匯入 <code>emitter</code><ul>
+<li>透過 <code>provide</code> 讓內層的元件都可以使用外層的功能，不需要重複進行 <code>import</code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> emitter <span class="keyword">from</span> <span class="string">&#x27;@/methods/emitter&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="title function_">provide</span> () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      emitter</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>內層若要使用 <code>mitt</code> ，只需要使用 <code>inject</code> 的方式即可進行讀取<ul>
+<li>回到 <em><strong>ProductsPage.vue</strong></em> 插入 <code>inject: [&#39;emitter&#39;]</code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">data</span> () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">products</span>: [],</span><br><span class="line">      <span class="attr">pagination</span>: &#123;&#125;,</span><br><span class="line">      <span class="attr">tempProduct</span>: &#123;&#125;,</span><br><span class="line">      <span class="attr">isNew</span>: <span class="literal">false</span>,</span><br><span class="line">      <span class="attr">isLoading</span>: <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">components</span>: &#123;</span><br><span class="line">    <span class="title class_">ProductModal</span>,</span><br><span class="line">    <span class="title class_">DelModal</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">inject</span>: [<span class="string">&#x27;emitter&#x27;</span>],</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="BS5-Toast-訊息回饋設定"><a href="#BS5-Toast-訊息回饋設定" class="headerlink" title="BS5 Toast 訊息回饋設定"></a>BS5 Toast 訊息回饋設定</h3><p>首先在 <code>src &gt; components</code> 新增 <em><strong>ToastList.vue</strong></em> 訊息回饋列表、<em><strong>ToastMsg.vue</strong></em> 單一訊息回饋 兩個檔案，接著分別針對兩個檔案做設定：</p>
+<ul>
+<li>在 <em><strong>ToastList.vue</strong></em> 訊息回饋列表檔案中進行以下設定：<ul>
+<li><code>&lt;template&gt;&lt;/template&gt;</code> 主要設定訊息回饋的顯示位置</li>
+<li>將單一訊息回饋 <em><strong>ToastMsg.vue</strong></em> 進行匯入</li>
+<li>透過 <code>inject: [&#39;emitter&#39;]</code> 進行跨元件溝通</li>
+<li>在生命週期 <code>mounted()</code> 設定訊息回饋的內容與樣式<ul>
+<li>作為訊息的 <strong>接收方</strong>，使用 <code>this.emitter.on(&#39;自定義名稱&#39;, () =&gt; &#123;&#125;)</code> 發起 <code>mitt</code> 事件監聽方法<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  // 訊息回饋定位</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;toast-container position-absolute top-0 end-0 p-3&quot;</span> <span class="attr">style</span>=<span class="string">&quot;z-index: 1050&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ToastMsg</span> <span class="attr">v-for</span>=<span class="string">&quot;(msg, key) in messages&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;key&quot;</span> <span class="attr">:msg</span>=<span class="string">&quot;msg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">ToastMsg</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 匯入單一訊息回饋</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="title class_">ToastMsg</span> <span class="keyword">from</span> <span class="string">&#x27;@/components/ToastMsg.vue&#x27;</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">ToastMsg</span></span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">data</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">messages</span>: []</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="comment">// 跨元件溝通</span></span></span><br><span class="line"><span class="language-javascript">  <span class="attr">inject</span>: [<span class="string">&#x27;emitter&#x27;</span>],</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">mounted</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">this</span>.<span class="property">emitter</span>.<span class="title function_">on</span>(<span class="string">&#x27;push-message&#x27;</span>, <span class="function">(<span class="params">message</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> &#123; style = <span class="string">&#x27;success&#x27;</span>, title, content &#125; = message</span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.<span class="property">messages</span>.<span class="title function_">push</span>(&#123; style, title, content &#125;)</span></span><br><span class="line"><span class="language-javascript">    &#125;)</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>接著在 <em><strong>ToastMsg.vue</strong></em> 單一訊息回饋檔案中進行以下設定：<ul>
+<li><code>&lt;template&gt;&lt;/template&gt;</code> 設定訊息回饋的顯示內容（icon、標題、內容等）</li>
+<li>從 Bootstrap 匯入 <code>&#39;bootstrap/js/dist/toast&#39;</code> 吐司元件做使用</li>
+<li>透過 <code>props: [&#39;msg&#39;]</code> 讀取外層 <em><strong>ToastList.vue</strong></em> 的資料</li>
+<li><a target="_blank" rel="noopener" href="https://bootstrap5.hexschool.com/docs/5.1/components/toasts/">參考文件</a>， 可參考文件中的用法來做改寫<ul>
+<li><code>delay: 6000</code> 設定訊息回饋顯示時間為 6 秒<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;toast&quot;</span> <span class="attr">role</span>=<span class="string">&quot;alert&quot;</span> <span class="attr">aria-live</span>=<span class="string">&quot;assertive&quot;</span> <span class="attr">aria-atomic</span>=<span class="string">&quot;true&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;toast&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;toast-header&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">:class</span>=<span class="string">&quot;`bg-$&#123;msg.style&#125;`&quot;</span> <span class="attr">class</span>=<span class="string">&quot;p-2 rounded me-2 d-inline-block&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">strong</span> <span class="attr">class</span>=<span class="string">&quot;me-auto&quot;</span>&gt;</span>&#123;&#123; msg.title &#125;&#125;<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn-close&quot;</span> <span class="attr">data-bs-dismiss</span>=<span class="string">&quot;toast&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;Close&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;toast-body&quot;</span> <span class="attr">v-if</span>=<span class="string">&quot;msg.content&quot;</span>&gt;</span></span><br><span class="line">        &#123;&#123; msg.content &#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="title class_">Toast</span> <span class="keyword">from</span> <span class="string">&#x27;bootstrap/js/dist/toast&#x27;</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">name</span>: <span class="string">&#x27;Toast&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">props</span>: [</span></span><br><span class="line"><span class="language-javascript">    <span class="string">&#x27;msg&#x27;</span></span></span><br><span class="line"><span class="language-javascript">  ],</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">mounted</span> () &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> toastEl = <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">toast</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> toast = <span class="keyword">new</span> <span class="title class_">ToastMsg</span>(toastEl, &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">delay</span>: <span class="number">6000</span></span></span><br><span class="line"><span class="language-javascript">    &#125;)</span></span><br><span class="line"><span class="language-javascript">    toast.<span class="title function_">show</span>()</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>接著在 <em><strong>DashBoard.vue</strong></em> 中匯入 <em><strong>ToastList.vue</strong></em><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">NavBar</span>&gt;</span><span class="tag">&lt;/<span class="name">NavBar</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container-fluid&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ToastList</span>&gt;</span><span class="tag">&lt;/<span class="name">ToastList</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-view</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="title class_">ToastList</span> <span class="keyword">from</span> <span class="string">&#x27;@/components/ToastList.vue&#x27;</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">NavBar</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">ToastList</span></span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  ...</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>回到 <em><strong>ProductsPage.vue</strong></em> 針對 <code>updateProduct()</code> 設定訊息回饋<ul>
+<li>作為訊息的 <strong>傳送方</strong>，使用 <code>this.emitter.emit(&#39;自定義名稱&#39;,&#123;參數 / 資料&#125;)</code> 傳送訊息內容<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">updateProduct</span> (item) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">tempProduct</span> = item</span><br><span class="line">    <span class="comment">// 新增</span></span><br><span class="line">    <span class="keyword">let</span> api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/admin/product`</span></span><br><span class="line">    <span class="keyword">let</span> httpMethod = <span class="string">&#x27;post&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 編輯</span></span><br><span class="line">    <span class="keyword">if</span> (!<span class="variable language_">this</span>.<span class="property">isNew</span>) &#123;</span><br><span class="line">      api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/admin/product/<span class="subst">$&#123;item.id&#125;</span>`</span></span><br><span class="line">      httpMethod = <span class="string">&#x27;put&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> productComponent = <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">productModal</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">true</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">axios</span>[httpMethod](api, &#123; <span class="attr">data</span>: <span class="variable language_">this</span>.<span class="property">tempProduct</span> &#125;)</span><br><span class="line">      .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">        productComponent.<span class="title function_">hideModal</span>()</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">false</span></span><br><span class="line">        <span class="keyword">if</span> (res.<span class="property">data</span>.<span class="property">success</span>) &#123;</span><br><span class="line">          <span class="variable language_">this</span>.<span class="title function_">getProducts</span>()</span><br><span class="line">          <span class="variable language_">this</span>.<span class="property">emitter</span>.<span class="title function_">emit</span>(<span class="string">&#x27;push-message&#x27;</span>, &#123;</span><br><span class="line">            <span class="attr">style</span>: <span class="string">&#x27;success&#x27;</span>,</span><br><span class="line">            <span class="attr">title</span>: <span class="string">&#x27;更新成功&#x27;</span></span><br><span class="line">          &#125;)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="variable language_">this</span>.<span class="property">emitter</span>.<span class="title function_">emit</span>(<span class="string">&#x27;push-message&#x27;</span>, &#123;</span><br><span class="line">            <span class="attr">style</span>: <span class="string">&#x27;danger&#x27;</span>,</span><br><span class="line">            <span class="attr">title</span>: <span class="string">&#x27;更新失敗&#x27;</span>,</span><br><span class="line">            <span class="attr">content</span>: res.<span class="property">data</span>.<span class="property">message</span>.<span class="title function_">join</span>(<span class="string">&#x27;、&#x27;</span>)</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>完成後，更新成功、失敗如圖<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/toast_success.png?alt=media&token=97b4f0aa-3389-478e-87ae-b6520b3cb74a">
+<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/toast_fail.png?alt=media&token=a6375880-5b55-47dd-8e73-56ad17bae6a0">
+* 且訊息回饋可堆疊顯示
+<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/toast_multi.png?alt=media&token=a8ceb34e-7448-4fe1-bbe3-f0d77ec6eff4"></li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Huiwen-Huang" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Emma Huang<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

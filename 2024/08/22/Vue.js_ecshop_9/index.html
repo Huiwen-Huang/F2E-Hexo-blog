@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Emma Huang"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vue.js ecshop 9.Loading Overlay 讀取效果"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hey! It&#39;s Emma!"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Vue.js ecshop 9.Loading Overlay 讀取效果 - Hey! It&#39;s Emma!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="img/logo.png"/>
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/blog/">Emma's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/">
+                            
+                                HOME
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/archives">
+                            
+                                Blogs
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Huiwen-Huang">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/blog/img/ecshop-9.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Vue.js ecshop 9.Loading Overlay 讀取效果</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-08-22
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/Vue-js-ecshop/">#Vue.js  / ecshop</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <blockquote>
+<p>在我們的後台頁面稍微作出個樣子之後，可以稍微來新增一些樣式，讓整個畫面看起來更專業！<br>此篇文章想跟大家分享的是 <strong>讀取的視覺效果 Loading</strong>，適當加上視覺效果可以讓頁面在讀取時不會一片空白，若是讀取時間較長，也可以透過讀取效果來提升使用者體驗，那我們就開始吧！</p>
+</blockquote>
+<h3 id="使用-vue3-loading-overlay-套件"><a href="#使用-vue3-loading-overlay-套件" class="headerlink" title="使用 vue3-loading-overlay 套件"></a>使用 vue3-loading-overlay 套件</h3><ul>
+<li>安裝套件（參考<a target="_blank" rel="noopener" href="https://github.com/moyoujun/vue3-loading-overlay?tab=readme-ov-file">文件</a>）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue3-loading-overlay</span><br></pre></td></tr></table></figure></li>
+<li>將元件新增到 <em><strong>main.js</strong></em> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 插入元件</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Loading</span> <span class="keyword">from</span> <span class="string">&#x27;vue3-loading-overlay&#x27;</span></span><br><span class="line"><span class="comment">// 插入樣式</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;vue3-loading-overlay/dist/vue3-loading-overlay.css&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 進行全域註冊</span></span><br><span class="line">app.<span class="title function_">component</span>(<span class="string">&#x27;LoadingOverlay&#x27;</span>, <span class="title class_">Loading</span>)</span><br></pre></td></tr></table></figure></li>
+<li>回到 <em><strong>ProductsPage.vue</strong></em> 插入元件<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">LoadingOverlay</span> <span class="attr">:active</span>=<span class="string">&quot;isLoading&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">LoadingOverlay</span>&gt;</span></span><br></pre></td></tr></table></figure>
+參考 <a target="_blank" rel="noopener" href="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/loading-demo.png?alt=media&token=217ba502-a010-4ca4-a679-67e7626dd6f0">文件</a> 的撰寫方式：<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/loading_use.png?alt=media&token=a7f0c6f2-2300-41d7-aa0a-c3152e5e7a7c">
+* 接著將 `isLoading` 這個狀態加到 `data`，並預設為 `false`
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="title function_">data</span> () &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">products</span>: [],</span><br><span class="line">        <span class="attr">pagination</span>: &#123;&#125;,</span><br><span class="line">        <span class="attr">tempProduct</span>: &#123;&#125;,</span><br><span class="line">        <span class="attr">isNew</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">isLoading</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  <span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">* 接著到需要使用的函式中做插入</span></span><br><span class="line"><span class="string">  * 讀取資料前 **顯示**：`</span><span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">true</span><span class="string">`</span></span><br><span class="line"><span class="string">  * 讀取資料後 **不顯示**：`</span><span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">false</span><span class="string">`</span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>html=</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">LoadingOverlay</span> <span class="attr">:active</span>=<span class="string">&quot;isLoading&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">LoadingOverlay</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    ...</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">getProducts</span> () &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/admin/products`</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// 讀取資料前顯示</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">true</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="title function_">get</span>(api)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="comment">// 讀取資料後不顯示</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">false</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="keyword">if</span> (res.<span class="property">data</span>.<span class="property">success</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">data</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="variable language_">this</span>.<span class="property">products</span> = res.<span class="property">data</span>.<span class="property">products</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="variable language_">this</span>.<span class="property">pagination</span> = res.<span class="property">data</span>.<span class="property">pagination</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    ...</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="預設樣式"><a href="#預設樣式" class="headerlink" title="預設樣式"></a>預設樣式</h4><ul>
+<li>完成設定後會如下圖顯示<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/loading-demo.png?alt=media&token=217ba502-a010-4ca4-a679-67e7626dd6f0"></li>
+</ul>
+<h4 id="自訂樣式"><a href="#自訂樣式" class="headerlink" title="自訂樣式"></a>自訂樣式</h4><p>若是希望可以自訂樣式，可以參考 <a target="_blank" rel="noopener" href="https://loading.io/">loading.io</a> 此網站提供許多樣式可以做使用。</p>
+<ul>
+<li>此網站會需要先註冊並登入方可下載，有些資源是免費的，有些是付費的，可以斟酌使用</li>
+<li>找到喜歡的讀取效果後，點擊下方的 <code>Download As &gt; more &gt; css</code> 來進行下載<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/loading.io.png?alt=media&token=3d5e9d61-dbd1-4d63-8a49-e49dc503303e"> </li>
+<li>下載後會得到一個 HTML 檔案：<ul>
+<li>請將其中的 HTML 內容新增到 <code>&lt;LoadingOverlay&gt;&lt;/LoadingOverlay&gt;</code> 裡面<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">LoadingOverlay</span> <span class="attr">:active</span>=<span class="string">&quot;isLoading&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;loadingio-spinner-ellipsis-nq4q5u6dq7r&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;ldio-x2uulkbinbj&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">LoadingOverlay</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>接著同步新增文件中的 CSS 內容到你的檔案中即可做使用<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/loading_io.png?alt=media&token=f265c9af-d815-4483-87a1-51657477ea20"> </li>
+<li>完成後如下圖<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/loadinf_io_demo.gif?alt=media&token=6539773a-687e-4941-b915-72aeeeee524f"></li>
+</ul>
+</li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Huiwen-Huang" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Emma Huang<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

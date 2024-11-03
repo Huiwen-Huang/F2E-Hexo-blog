@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Emma Huang"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vue.js ecshop 2.匯入 Bootstrap 5"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hey! It&#39;s Emma!"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Vue.js ecshop 2.匯入 Bootstrap 5 - Hey! It&#39;s Emma!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="img/logo.png"/>
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/blog/">Emma's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/">
+                            
+                                HOME
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/archives">
+                            
+                                Blogs
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Huiwen-Huang">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/blog/img/ecshop-2.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Vue.js ecshop 2.匯入 Bootstrap 5</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-08-12
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/Vue-js-ecshop/">#Vue.js  / ecshop</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>若希望在專案中使用 Bootstrap 5（以下簡稱 BS5） 套件有兩種方式：<code>CDN</code> 以及 <code>npm 安裝</code>。<br>此篇文章，首先會與大家分享如何透過 <code>npm 安裝</code> Bootstrap 套件，並且自訂樣式設定；接著也會補充透過 <code>CDN</code> 的安裝方式，那我們就開始吧！</p>
+<h4 id="使用-NPM-安裝-Bootstrap"><a href="#使用-NPM-安裝-Bootstrap" class="headerlink" title="使用 NPM 安裝 Bootstrap"></a>使用 NPM 安裝 Bootstrap</h4><p>於終端機輸入以下代碼進行套件安裝：<code>npm install bootstrap</code></p>
+<h4 id="調整-App-vue"><a href="#調整-App-vue" class="headerlink" title="調整 App.vue"></a>調整 App.vue</h4><ul>
+<li>安裝完畢後，接著進入 <a target="_blank" rel="noopener" href="https://bootstrap5.hexschool.com/docs/5.1/customize/sass/">BS5 六角學院翻譯文件</a> ，找到左側 <strong><code>自訂義 &gt; Sass</code></strong> <img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/bs5.png?alt=media&token=bbd9031b-c7cb-4eeb-97b1-12df03e6b622" width="100%"></li>
+<li>將上述欄位的文件插入到 <em><strong>App.vue</strong></em> 檔案的 <code>&lt;style&gt;</code> 中  <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"><span class="keyword">@import</span> <span class="string">&quot;~bootstrap/scss/bootstrap&quot;</span>;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></li>
+<li>接著就可以開始新增 Bootstrap 元件到專案中</li>
+</ul>
+<h4 id="自定義變數"><a href="#自定義變數" class="headerlink" title="自定義變數"></a>自定義變數</h4><p>不過若是希望可以自定義變數的話，可以參考下方進階設定：</p>
+<ul>
+<li>首先進入 <strong><code>src &gt; assets</code></strong> 資料夾，新增 <em><strong>all.scss</strong></em> 檔案</li>
+<li>接著新增 <em><strong>helpers</strong></em> 資料夾，並且在其中新增 <em><strong>_variables.scss</strong></em> 檔案  <img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/folder.png?alt=media&token=3cb05e1c-4b79-4291-89c5-145f03f7b3be" width="50%"> 
+  
+  (以上步驟完成後將會如附圖所示)</li>
+<li>下一步進入 <strong><code>node_modules &gt; bootstrap &gt; scss</code></strong> 找到 <em><strong>variables.scss</strong></em> 檔案</li>
+<li>將檔案中的內容全數複製，貼回稍早新增的 <em><strong>_variables.scss</strong></em> 檔案中</li>
+<li>接著再回到 <em><strong>all.scss</strong></em> 檔案，新增以下程式碼片段來進行客製化設定：  <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;~bootstrap/scss/functions&quot;</span>;</span><br><span class="line"><span class="keyword">@import</span> <span class="string">&quot;../assets/helpers/variables&quot;</span>;</span><br><span class="line"><span class="keyword">@import</span> <span class="string">&quot;~bootstrap/scss/mixins&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Custom.scss</span></span><br><span class="line"><span class="comment">// Include all of Bootstrap</span></span><br><span class="line"><span class="keyword">@import</span> <span class="string">&quot;~bootstrap/scss/bootstrap&quot;</span>;</span><br></pre></td></tr></table></figure></li>
+<li><strong>最後務必要回到 <em>App.vue</em> 調整以下片段：</strong>  <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"><span class="keyword">@import</span> <span class="string">&quot;./assets/all.scss&quot;</span>; <span class="comment">// 原本是 @import &quot;~bootstrap/scss/bootstrap&quot;;</span></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></li>
+<li>以上步驟完成後，就可以測試看看是否可以如期使用 BS5 元件</li>
+<li>確認沒問題的話，可以再進到 <em><strong>_variable.scss</strong></em> 檔案調整相關自定義變數<ul>
+<li>最常修改的是 <strong><code>$theme-colors</code></strong> 可以依照網站主題色做調整  <img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/Untitled.png?alt=media&token=dc19c5d9-cc9e-45fd-a39c-77c17b71f06b" width="50%"></li>
+</ul>
+</li>
+</ul>
+<h4 id="補充：使用-CDN-插入-Bootstrap-套件"><a href="#補充：使用-CDN-插入-Bootstrap-套件" class="headerlink" title="補充：使用 CDN 插入 Bootstrap 套件"></a>補充：使用 CDN 插入 Bootstrap 套件</h4><p>首先我們進入  <a target="_blank" rel="noopener" href="https://bootstrap5.hexschool.com/docs/5.1/customize/sass/">BS5 六角學院翻譯文件</a>，找到左側 <strong><code>快速開始 &gt; 簡介</code></strong><br>可以看到其中有提供 CSS &#x2F; JS 的載入程式碼，我們只需要將以下程式碼新增到 <strong><code>public &gt; index.html</code></strong> 檔案中即可使用。</p>
+<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/bs5_cdn.png?alt=media&token=6134ac56-2e5f-457b-a85d-c07a00671667" width="100%"> 
+
+<blockquote>
+<p>若希望了解更多使用資訊，歡迎參考 BS5 <a target="_blank" rel="noopener" href="https://getbootstrap.com/">官方文件</a> 。</p>
+</blockquote>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Huiwen-Huang" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Emma Huang<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

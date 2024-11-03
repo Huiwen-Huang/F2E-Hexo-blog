@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Emma Huang"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vue.js ecshop 18.建立訂單與結帳流程"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hey! It&#39;s Emma!"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Vue.js ecshop 18.建立訂單與結帳流程 - Hey! It&#39;s Emma!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="img/logo.png"/>
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/blog/">Emma's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/">
+                            
+                                HOME
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/archives">
+                            
+                                Blogs
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Huiwen-Huang">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/blog/img/ecshop-18.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Vue.js ecshop 18.建立訂單與結帳流程</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-09-10
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/Vue-js-ecshop/">#Vue.js  / ecshop</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <blockquote>
+<p>完善購物車頁面後，接著就要進入到下單、結帳流程。<br>訂單除了商品外，還需要請顧客填寫訂購資訊、取貨、付款資訊等，今天就要跟大家分享如何製作 <strong>表單驗證</strong>，避免顧客漏填重要資訊；以及製作訂單完成頁面，那我們就開始吧！</p>
+</blockquote>
+<h3 id="建立資料填寫頁面"><a href="#建立資料填寫頁面" class="headerlink" title="建立資料填寫頁面"></a>建立資料填寫頁面</h3><ul>
+<li>首先在 <code>src &gt; views</code> 新增 <em><strong>ShopCheckoutInfo.vue</strong></em> 檔案</li>
+<li>完成模板製作後如下圖：<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/checkoutinfo.png?alt=media&token=f857c00c-6268-44f4-b562-02cba420041c"></li>
+<li>透過 <code>v-model</code> 抓取表單內容，<strong>送出訂單</strong> <code>addOrder()</code> 行為會需要帶入表單內容</li>
+<li>並且透過 <code>this.$router.push</code> 設定跳轉到訂單完成頁面<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">data</span> () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">isLoading</span>: <span class="literal">false</span>,</span><br><span class="line">      <span class="attr">form</span>: &#123;</span><br><span class="line">        <span class="attr">user</span>: &#123;</span><br><span class="line">          <span class="attr">name</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">          <span class="attr">tel</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">          <span class="attr">email</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">          <span class="attr">address</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">message</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">shipping</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">pay</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,  </span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="title function_">addOrder</span> () &#123;</span><br><span class="line">      <span class="keyword">const</span> api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/order`</span></span><br><span class="line">      <span class="keyword">const</span> order = <span class="variable language_">this</span>.<span class="property">form</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">true</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">$http</span>.<span class="title function_">post</span>(api, &#123; <span class="attr">data</span>: order &#125;)</span><br><span class="line">        .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">false</span></span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">          <span class="keyword">if</span> (res.<span class="property">data</span>.<span class="property">success</span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(<span class="string">`/checkout/<span class="subst">$&#123;res.data.orderId&#125;</span>`</span>)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="vee-validation-表單驗證"><a href="#vee-validation-表單驗證" class="headerlink" title="vee validation 表單驗證"></a>vee validation 表單驗證</h3><p>接著要進入到表單的驗證製作，詳細流程如下：</p>
+<h4 id="步驟1：安裝套件，參考文件"><a href="#步驟1：安裝套件，參考文件" class="headerlink" title="步驟1：安裝套件，參考文件"></a>步驟1：安裝套件，<a target="_blank" rel="noopener" href="https://vee-validate.logaretm.com/v4/guide/overview/">參考文件</a></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install vee-validate 主要套件</span><br><span class="line">npm install @vee-validate/i18n 驗證規則</span><br><span class="line">npm install @vee-validate/rules 多國語系</span><br></pre></td></tr></table></figure>
+<h4 id="步驟2：註冊元件"><a href="#步驟2：註冊元件" class="headerlink" title="步驟2：註冊元件"></a>步驟2：註冊元件</h4><p>import 相關元件到 <em><strong>main.js</strong></em>，並進行全域註冊</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Form</span>, <span class="title class_">Field</span>, <span class="title class_">ErrorMessage</span>, defineRule, configure &#125; <span class="keyword">from</span> <span class="string">&#x27;vee-validate&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 用 V 來區隔元件名稱</span></span><br><span class="line">app.<span class="title function_">component</span>(<span class="string">&#x27;VForm&#x27;</span>, <span class="title class_">Form</span>)</span><br><span class="line">app.<span class="title function_">component</span>(<span class="string">&#x27;VField&#x27;</span>, <span class="title class_">Field</span>)</span><br><span class="line">app.<span class="title function_">component</span>(<span class="string">&#x27;ErrorMessage&#x27;</span>, <span class="title class_">ErrorMessage</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="步驟3：加入特定規則"><a href="#步驟3：加入特定規則" class="headerlink" title="步驟3：加入特定規則"></a>步驟3：加入特定規則</h4><p>將要用到的規則 import 到 <em><strong>main.js</strong></em>，透過 <code>defineRule</code> 方法進行規則註冊</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; required, email, min &#125; <span class="keyword">from</span> <span class="string">&#x27;@vee-validate/rules&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">defineRule</span>(<span class="string">&#x27;required&#x27;</span>, required)</span><br><span class="line"><span class="title function_">defineRule</span>(<span class="string">&#x27;email&#x27;</span>, email)</span><br><span class="line"><span class="title function_">defineRule</span>(<span class="string">&#x27;min&#x27;</span>, min)</span><br></pre></td></tr></table></figure>
+<h4 id="步驟4：加入多國語系"><a href="#步驟4：加入多國語系" class="headerlink" title="步驟4：加入多國語系"></a>步驟4：加入多國語系</h4><p>先將多國語系 import 到 <em><strong>main.js</strong></em>，並取出 <code>localize</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; localize &#125; <span class="keyword">from</span> <span class="string">&#x27;@vee-validate/i18n&#x27;</span></span><br><span class="line"><span class="keyword">import</span> zhTW <span class="keyword">from</span> <span class="string">&#x27;@vee-validate/i18n/dist/locale/zh_TW.json&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>透過 <code>configure</code> 將語系設定為中文</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">configure</span>(&#123;</span><br><span class="line">  <span class="attr">generateMessage</span>: <span class="title function_">localize</span>(<span class="string">&#x27;zh_TW&#x27;</span>, zhTW),</span><br><span class="line">  <span class="attr">validateOnInput</span>: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="步驟5：套用-v-form-並加入-v-slot"><a href="#步驟5：套用-v-form-並加入-v-slot" class="headerlink" title="步驟5：套用 v-form 並加入 v-slot"></a>步驟5：套用 <code>v-form</code> 並加入 <code>v-slot</code></h4><p><code>v-slot</code> 可以將驗證結果的資料直接帶到區塊中，故若有錯誤會存在 <code>&#123; errors &#125;</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">v-form</span>  @<span class="attr">submit</span>=<span class="string">&quot;addOrder&quot;</span> <span class="attr">v-slot</span>=<span class="string">&quot;&#123; errors &#125;&quot;</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;/<span class="name">v-form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="步驟6：套用-v-field-及-error-message"><a href="#步驟6：套用-v-field-及-error-message" class="headerlink" title="步驟6：套用 v-field 及 error-message"></a>步驟6：套用 <code>v-field</code> 及 <code>error-message</code></h4><ul>
+<li><p><code>input</code>，改成 <code>v-field</code>，需新增 <strong><code>&lt;/v-field&gt;</code></strong></p>
+</li>
+<li><p><code>&lt;v-field&gt;&lt;/v-field&gt;</code> 的 <code>name</code> 跟 <code>&lt;error-message&gt;&lt;/error-message&gt;</code> 的 <code>name</code> 要相同</p>
+</li>
+<li><p><code>rules</code> 若有多組規則，可以用 “<code>|</code>“ 隔開：<code>&quot;email|required&quot;</code></p>
+</li>
+<li><p>透過動態新增 <code>class</code> 的方式插入<strong>未通過驗證的樣式</strong> </p>
+<ul>
+<li><code>errors[&#39;要輸入 name 的名稱&#39;]</code><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;email&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-label&quot;</span>&gt;</span>訂購人信箱<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">v-field</span> <span class="attr">type</span>=<span class="string">&quot;email&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;email&quot;</span> <span class="attr">name</span>=<span class="string">&quot;訂購人信箱&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">rules</span>=<span class="string">&quot;email|required&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;form.user.email&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:class</span>=<span class="string">&quot;&#123; &#x27;is-invalid&#x27;: errors[&#x27;訂購人信箱&#x27;] &#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">v-field</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">error-message</span> <span class="attr">name</span>=<span class="string">&quot;訂購人信箱&quot;</span> <span class="attr">class</span>=<span class="string">&quot;invalid-feedback&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">error-message</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/validation_demo.png?alt=media&token=130d3540-e5b0-4390-840d-def500e01f5e"></li>
+</ul>
+</li>
+<li><p><code>select</code> 選單的驗證改寫</p>
+<ul>
+<li>新增 <code>as=&quot;select&quot;</code> 作為下拉選單驗證設定<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;shipping&quot;</span> <span class="attr">class</span>=<span class="string">&quot;mb-2&quot;</span>&gt;</span>取貨方式<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">v-field</span> <span class="attr">class</span>=<span class="string">&quot;form-select&quot;</span> <span class="attr">id</span>=<span class="string">&quot;shipping&quot;</span> <span class="attr">name</span>=<span class="string">&quot;取貨方式&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">v-model</span>=<span class="string">&quot;form.shipping&quot;</span> <span class="attr">as</span>=<span class="string">&quot;select&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">rules</span>=<span class="string">&quot;required&quot;</span> <span class="attr">:class</span>=<span class="string">&quot;&#123; &#x27;is-invalid&#x27;: errors[&#x27;取貨方式&#x27;] &#125;&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>請選擇取貨方式<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;自取&quot;</span>&gt;</span>自取<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;外送&quot;</span>&gt;</span>外送<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">v-field</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">error-message</span> <span class="attr">name</span>=<span class="string">&quot;取貨方式&quot;</span> <span class="attr">class</span>=<span class="string">&quot;invalid-feedback&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">error-message</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/select_validation.png?alt=media&token=f0bdc02d-2569-4371-b8b6-84133abcc5e1"></li>
+</ul>
+</li>
+</ul>
+<h4 id="步驟7：自訂義驗證規則"><a href="#步驟7：自訂義驗證規則" class="headerlink" title="步驟7：自訂義驗證規則"></a>步驟7：自訂義驗證規則</h4><ul>
+<li>為 <strong>電話號碼</strong> 設定自訂規則</li>
+<li><code>:rules=&quot;isPhone&quot;</code>  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;tel&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-label&quot;</span>&gt;</span>訂購人電話<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">v-field</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;tel&quot;</span> <span class="attr">name</span>=<span class="string">&quot;tel&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;form.user.tel&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">:rules</span>=<span class="string">&quot;isPhone&quot;</span> <span class="attr">:class</span>=<span class="string">&quot;&#123; &#x27;is-invalid&#x27;: errors[&#x27;tel&#x27;] &#125;&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">v-field</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">error-message</span> <span class="attr">name</span>=<span class="string">&quot;tel&quot;</span> <span class="attr">class</span>=<span class="string">&quot;invalid-feedback&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">error-message</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">methods</span>: &#123;</span><br><span class="line">  <span class="title function_">isPhone</span> (value) &#123;</span><br><span class="line">    <span class="keyword">const</span> phoneNumber = <span class="regexp">/^(09)[0-9]&#123;8&#125;$/</span></span><br><span class="line">    <span class="keyword">return</span> phoneNumber.<span class="title function_">test</span>(value) ? <span class="literal">true</span> : <span class="string">&#x27;須為正確的電話號碼&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="建立訂單完成頁面"><a href="#建立訂單完成頁面" class="headerlink" title="建立訂單完成頁面"></a>建立訂單完成頁面</h3><ul>
+<li>首先在 <code>src &gt; views</code> 新增 <em><strong>ShopCheckout.vue</strong></em> 檔案</li>
+<li>送出訂單後就會看到訂單完成頁面如下： <img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/order.png?alt=media&token=916f6d52-ec45-4641-85df-1fb0fe296d63"></li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Huiwen-Huang" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Emma Huang<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

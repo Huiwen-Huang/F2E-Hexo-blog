@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Emma Huang"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Vue.js ecshop 17.編輯購物車並套用優惠卷"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="從 客戶成功顧問 到 前端工程師 的轉職技術筆記"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hey! It&#39;s Emma!"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://huiwen-huang.github.io/blogimg/japan-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Vue.js ecshop 17.編輯購物車並套用優惠卷 - Hey! It&#39;s Emma!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="img/logo.png"/>
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/blog/">Emma's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/">
+                            
+                                HOME
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/archives">
+                            
+                                Blogs
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Huiwen-Huang">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/blog/img/ecshop-17.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Vue.js ecshop 17.編輯購物車並套用優惠卷</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-09-09
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/Vue-js-ecshop/">#Vue.js  / ecshop</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <blockquote>
+<p>此篇文章要分享的是購物車的調整，包含 <strong>更新購物車數量</strong> 以及前後台 <strong>優惠卷</strong> 的設定與使用，那我們就開始吧！</p>
+</blockquote>
+<h3 id="更新購物車數量"><a href="#更新購物車數量" class="headerlink" title="更新購物車數量"></a>更新購物車數量</h3><ul>
+<li>針對 <strong>數量</strong> 欄位進行調整：<ul>
+<li>避免數量變成負值，可透過 <code>min=1</code> 來排除</li>
+<li>新增 <code>@change=&quot;updateCart(item)&quot;</code> 觸發更新購物車<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;input-group input-group-sm&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span> <span class="attr">v-model.number</span>=<span class="string">&quot;item.qty&quot;</span>  </span></span><br><span class="line"><span class="tag">            <span class="attr">min</span>=<span class="string">&quot;1&quot;</span> @<span class="attr">change</span>=<span class="string">&quot;updateCart(item)&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;input-group-text&quot;</span>&gt;</span>/ 單位<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>新增 <code>updateCart()</code> 更新購物車函式<ul>
+<li><code>status.loadingItem</code> 主要用以設定單一選項點擊後反灰效果，避免使用者快速點擊<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">updateCart</span> (item) &#123;</span><br><span class="line">  <span class="keyword">const</span> api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/cart/<span class="subst">$&#123;item.id&#125;</span>`</span></span><br><span class="line">  <span class="keyword">const</span> cart = &#123;</span><br><span class="line">    <span class="attr">product_id</span>: item.<span class="property">product_id</span>,</span><br><span class="line">    <span class="attr">qty</span>: item.<span class="property">qty</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">true</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">status</span>.<span class="property">loadingItem</span> = item.<span class="property">id</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$http</span>.<span class="title function_">put</span>(api, &#123; <span class="attr">data</span>: cart &#125;)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">false</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">status</span>.<span class="property">loadingItem</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">getCart</span>()</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>也須同步新增到 <code>input</code> 中 <code>:disabled=&quot;status.loadingItem === item.id&quot;</code><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;input-group input-group-sm&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">:disabled</span>=<span class="string">&quot;status.loadingItem === item.id&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">v-model.number</span>=<span class="string">&quot;item.qty&quot;</span> <span class="attr">min</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">            @<span class="attr">change</span>=<span class="string">&quot;updateCart(item)&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;input-group-text&quot;</span>&gt;</span>/ &#123;&#123; item.product.unit &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="購物車套用優惠卷"><a href="#購物車套用優惠卷" class="headerlink" title="購物車套用優惠卷"></a>購物車套用優惠卷</h3><h4 id="後台新增優惠卷頁面"><a href="#後台新增優惠卷頁面" class="headerlink" title="後台新增優惠卷頁面"></a>後台新增優惠卷頁面</h4><ul>
+<li>首先在 <code>src &gt; views</code> 新增 <em><strong>CouponsList.vue</strong></em> 頁面<ul>
+<li>新增優惠卷介面，包含 <strong>新增優惠卷</strong> 按鈕、<strong>編輯、刪除</strong> 按鈕</li>
+<li>透過 <strong>BS5 Modal</strong> 插入新增、編輯、刪除優惠卷彈窗</li>
+</ul>
+</li>
+<li>接著在 <code>src &gt; components</code> 新增 <em><strong>CouponModal.vue</strong></em> 頁面<ul>
+<li>留意 API 有必填欄位，限制格式，可以透過 <code>input type</code> 去做設定</li>
+<li>匯入 <em><strong>modalMixins.js</strong></em> 即可控制 <code>modal</code> 開關</li>
+<li>日期 &amp; 時間格式需調整<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> modalMixins <span class="keyword">from</span> <span class="string">&#x27;@/mixins/modalMixins&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;couponModal&#x27;</span>,</span><br><span class="line">  <span class="attr">props</span>: &#123;</span><br><span class="line">    <span class="attr">coupon</span>: &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title function_">data</span> () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">tempCoupon</span>: &#123;&#125;,</span><br><span class="line">      <span class="attr">due_date</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">emits</span>: [<span class="string">&#x27;update-coupon&#x27;</span>],</span><br><span class="line">  <span class="attr">watch</span>: &#123;</span><br><span class="line">    <span class="title function_">coupon</span> () &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">tempCoupon</span> = <span class="variable language_">this</span>.<span class="property">coupon</span></span><br><span class="line">      <span class="comment">// 將時間格式改為 YYYY-MM-DD</span></span><br><span class="line">      <span class="comment">// console.log(this.tempCoupon.due_date)</span></span><br><span class="line">      <span class="keyword">const</span> dateAndTime = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="variable language_">this</span>.<span class="property">tempCoupon</span>.<span class="property">due_date</span> * <span class="number">1000</span>).<span class="title function_">toISOString</span>().<span class="title function_">split</span>(<span class="string">&#x27;T&#x27;</span>);</span><br><span class="line">      [<span class="variable language_">this</span>.<span class="property">due_date</span>] = dateAndTime</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">due_date</span> () &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">tempCoupon</span>.<span class="property">due_date</span> = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="keyword">new</span> <span class="title class_">Date</span>(<span class="variable language_">this</span>.<span class="property">due_date</span>) / <span class="number">1000</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">mixins</span>: [modalMixins]</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>回到 <em><strong>CouponsList.vue</strong></em> 匯入 <em><strong>CouponModal.vue</strong></em><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">CouponModal</span> <span class="attr">ref</span>=<span class="string">&quot;couponModal&quot;</span> <span class="attr">:coupon</span>=<span class="string">&quot;tempCoupon&quot;</span> </span></span><br><span class="line"><span class="tag">             @<span class="attr">update-coupon</span>=<span class="string">&quot;updateCoupon&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">CouponModal</span>&gt;</span></span><br><span class="line"></span><br><span class="line">import CouponModal from &#x27;@/components/CouponModal.vue&#x27;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>需特別留意 <code>openModal()</code> 在開啟 <strong>新增優惠卷</strong> 彈窗時，<strong>要先預設帶入日期</strong>，避免抓不到內容而產生錯誤<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">openModal</span> (isNew, item) &#123;</span><br><span class="line">  <span class="keyword">if</span> (isNew) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">tempCoupon</span> = &#123; <span class="attr">due_date</span>: <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>() / <span class="number">1000</span> &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">tempCoupon</span> = &#123; ...item &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">isNew</span> = isNew</span><br><span class="line">  <span class="keyword">const</span> couponCompoent = <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">couponModal</span></span><br><span class="line">  couponCompoent.<span class="title function_">showModal</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>完成後如圖所示：<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/promotion.png?alt=media&token=6936849a-7ac9-4df2-bc00-1556c0716e62">
+<img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/edit_promotion.png?alt=media&token=d4b9737a-9b02-4841-ab24-9a0665e8b568"></li>
+</ul>
+<h4 id="前台購物車套用優惠"><a href="#前台購物車套用優惠" class="headerlink" title="前台購物車套用優惠"></a>前台購物車套用優惠</h4><ul>
+<li>首先在 <em><strong>CartList.vue</strong></em> 頁面新增<strong>輸入優惠代碼的欄位與按鈕</strong><ul>
+<li>透過 <code>v-model</code> 讀取優惠代碼，帶給 api 做為參數<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control me-3&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;請輸入優惠碼&quot;</span> </span></span><br><span class="line"><span class="tag">       <span class="attr">v-model</span>=<span class="string">&quot;coupon_code&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;input-group-append&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-outline-secondary&quot;</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> </span></span><br><span class="line"><span class="tag">            @<span class="attr">click</span>=<span class="string">&quot;addCouponCode&quot;</span>&gt;</span></span><br><span class="line">      套用優惠</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>接著繼續在 <em><strong>CartList.vue</strong></em> 頁面新增套用優惠活動 <code>addCouponCode()</code> 的函式<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">addCouponCode</span> () &#123;</span><br><span class="line">  <span class="keyword">const</span> api = <span class="string">`<span class="subst">$&#123;process.env.VUE_APP_API&#125;</span>api/<span class="subst">$&#123;process.env.VUE_APP_PATH&#125;</span>/coupon`</span></span><br><span class="line">  <span class="comment">// 需要帶入參數</span></span><br><span class="line">  <span class="keyword">const</span> coupon = &#123;</span><br><span class="line">    <span class="attr">code</span>: <span class="variable language_">this</span>.<span class="property">coupon_code</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">true</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$http</span>.<span class="title function_">post</span>(api, &#123; <span class="attr">data</span>: coupon &#125;)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">isLoading</span> = <span class="literal">false</span></span><br><span class="line">      <span class="comment">// 套用後清空欄位資料</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">coupon_code</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="comment">// 設定訊息回饋</span></span><br><span class="line">      <span class="variable language_">this</span>.$httpMsgState(res, <span class="string">&#x27;優惠套用&#x27;</span>)</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">getCart</span>()</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>當下購物車內的商品全部都會套用優惠<ul>
+<li>金額都要加上千分號格式 <code>$filters.currency(item.total)</code><img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/promotion_demo.png?alt=media&token=45229e41-de87-44f8-9791-ef734f148bda"></li>
+<li>折扣後的金額會是 <code>final_total</code><img src="https://firebasestorage.googleapis.com/v0/b/emmablog-e5a1c.appspot.com/o/final_total.png?alt=media&token=4ada22dd-6045-4142-bcd5-4758871acac0"></li>
+</ul>
+</li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Huiwen-Huang" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2024 Emma Huang<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
